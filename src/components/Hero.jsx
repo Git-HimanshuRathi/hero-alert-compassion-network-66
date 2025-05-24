@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { MapPin, Heart, Phone } from "lucide-react";
+import { Heart, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const Hero = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6"
             >
               <Heart className="w-4 h-4" />
               Emergency Response Platform
@@ -31,7 +31,7 @@ const Hero = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Save Lives with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-500">
                 {" "}Instant Alerts
               </span>
             </h1>
@@ -42,7 +42,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link to="/emergency">
-                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
                   <Phone className="w-5 h-5 mr-2" />
                   Report Emergency
                 </Button>
@@ -66,7 +66,7 @@ const Hero = () => {
                 <div>Lives Saved</div>
               </div>
               <div className="text-center">
-                <div className="font-bold text-2xl text-orange-500">500+</div>
+                <div className="font-bold text-2xl text-blue-500">500+</div>
                 <div>NGO Partners</div>
               </div>
               <div className="text-center">
@@ -83,12 +83,11 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full h-96 bg-gradient-to-br from-blue-100 to-orange-100 rounded-3xl flex items-center justify-center overflow-hidden">
-              {/* Emergency Icon */}
+            <div className="relative w-full h-96 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl flex items-center justify-center overflow-hidden">
+              {/* Logo Image */}
               <motion.div
                 animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
+                  scale: [1, 1.05, 1],
                 }}
                 transition={{ 
                   duration: 3,
@@ -97,8 +96,12 @@ const Hero = () => {
                 }}
                 className="relative z-10"
               >
-                <div className="w-32 h-32 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-                  <MapPin className="w-16 h-16 text-white" />
+                <div className="w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-2xl p-8">
+                  <img 
+                    src="/lovable-uploads/9bb0376c-a74a-4e6c-92b9-ed627d847c4a.png" 
+                    alt="Animal Care Emergency Platform"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </motion.div>
               
@@ -106,12 +109,12 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute top-8 right-8 w-12 h-12 bg-blue-500 rounded-full opacity-20"
+                className="absolute top-8 right-8 w-12 h-12 bg-blue-400 rounded-full opacity-20"
               />
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 2.5, repeat: Infinity }}
-                className="absolute bottom-8 left-8 w-8 h-8 bg-orange-500 rounded-full opacity-30"
+                className="absolute bottom-8 left-8 w-8 h-8 bg-blue-300 rounded-full opacity-30"
               />
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
