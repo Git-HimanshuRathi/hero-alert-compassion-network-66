@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Heart, MapPin, Mail, Phone } from "lucide-react";
 
@@ -130,4 +129,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Footer; 

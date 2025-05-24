@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Building2, Shield, Bell, MapPin, BarChart3, Heart, Monitor, Users, FileText, TrendingUp } from "lucide-react";
@@ -137,4 +136,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Index; 

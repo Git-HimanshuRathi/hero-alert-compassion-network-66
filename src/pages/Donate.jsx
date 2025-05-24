@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +20,7 @@ const Donate = () => {
 
   const predefinedAmounts = [500, 1000, 2000, 5000];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Donation Data:", donationData);
     
@@ -50,14 +49,14 @@ const Donate = () => {
     }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setDonationData({
       ...donationData,
       [e.target.name]: e.target.value
     });
   };
 
-  const selectAmount = (amount: number) => {
+  const selectAmount = (amount) => {
     setDonationData({
       ...donationData,
       amount: amount.toString()
@@ -201,4 +200,4 @@ const Donate = () => {
   );
 };
 
-export default Donate;
+export default Donate; 

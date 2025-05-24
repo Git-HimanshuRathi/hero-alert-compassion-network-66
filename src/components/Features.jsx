@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Bell, MapPin, Calendar, Heart, Shield, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -103,4 +102,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default Features; 

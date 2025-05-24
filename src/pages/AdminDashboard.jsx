@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Shield, Users, FileText, TrendingUp, Monitor, Settings } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -208,4 +207,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default AdminDashboard; 

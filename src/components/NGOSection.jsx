@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, UserCheck, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -116,4 +115,4 @@ const NGOSection = () => {
   );
 };
 
-export default NGOSection;
+export default NGOSection; 

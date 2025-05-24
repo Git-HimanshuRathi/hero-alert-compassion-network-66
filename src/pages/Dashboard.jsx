@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { AlertTriangle, Heart, FileText, TrendingUp, Users, DollarSign } from "lucide-react";
@@ -148,4 +147,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboard; 

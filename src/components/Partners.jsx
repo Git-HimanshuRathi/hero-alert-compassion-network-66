@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
@@ -97,4 +96,4 @@ const Partners = () => {
   );
 };
 
-export default Partners;
+export default Partners; 

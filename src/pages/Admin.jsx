@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +16,7 @@ const Admin = () => {
     password: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Admin Login:", credentials);
     
@@ -40,7 +39,7 @@ const Admin = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setCredentials({
       ...credentials,
       [e.target.name]: e.target.value
@@ -118,4 +117,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Admin; 

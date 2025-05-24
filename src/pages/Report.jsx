@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -15,10 +14,10 @@ const Report = () => {
   const [reportData, setReportData] = useState({
     description: "",
     location: "",
-    image: null as File | null
+    image: null
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Report Data:", reportData);
     
@@ -46,7 +45,7 @@ const Report = () => {
     }, 2000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     if (e.target.type === 'file') {
       setReportData({
         ...reportData,
@@ -185,4 +184,4 @@ const Report = () => {
   );
 };
 
-export default Report;
+export default Report; 

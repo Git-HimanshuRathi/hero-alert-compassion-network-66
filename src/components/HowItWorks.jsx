@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Camera, MapPin, Bell, Users } from "lucide-react";
 
@@ -84,4 +83,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export default HowItWorks; 

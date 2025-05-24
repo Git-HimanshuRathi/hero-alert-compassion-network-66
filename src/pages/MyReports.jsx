@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -6,17 +5,8 @@ import { FileText, MapPin, Calendar, Image, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-interface Report {
-  id: number;
-  description: string;
-  location: string;
-  image: string | null;
-  date: string;
-  status: string;
-}
-
 const MyReports = () => {
-  const [reports, setReports] = useState<Report[]>([]);
+  const [reports, setReports] = useState([]);
 
   useEffect(() => {
     // Load reports from localStorage
@@ -24,7 +14,7 @@ const MyReports = () => {
     setReports(storedReports);
   }, []);
 
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString('en-IN', {
       day: 'numeric',
       month: 'long',
@@ -34,7 +24,7 @@ const MyReports = () => {
     });
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status) => {
     switch (status.toLowerCase()) {
       case 'submitted':
         return 'bg-blue-100 text-blue-800 border-blue-200';
@@ -156,4 +146,4 @@ const MyReports = () => {
   );
 };
 
-export default MyReports;
+export default MyReports; 
