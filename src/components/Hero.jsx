@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { MapPin, Heart, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left"
           >
+            
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
@@ -84,7 +84,7 @@ const Hero = () => {
             className="relative"
           >
             <div className="relative w-full h-96 bg-gradient-to-br from-blue-100 to-orange-100 rounded-3xl flex items-center justify-center overflow-hidden">
-              {/* Emergency Icon */}
+              {/* Emergency Icon - Replace MapPin with uploaded image */}
               <motion.div
                 animate={{ 
                   scale: [1, 1.1, 1],
@@ -97,12 +97,16 @@ const Hero = () => {
                 }}
                 className="relative z-10"
               >
-                <div className="w-32 h-32 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-                  <MapPin className="w-16 h-16 text-white" />
+                <div className="w-32 h-32 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-2xl p-4">
+                  <img 
+                    src="/lovable-uploads/1e320915-c97b-4abe-b0cd-787eb28a84c2.png" 
+                    alt="Emergency Alert Logo" 
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
               </motion.div>
               
-              {/* Floating Elements */}
+              
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 2, repeat: Infinity }}
