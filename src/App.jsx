@@ -1,10 +1,13 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import About from "./pages/About";
 import Register from "./pages/Register";
+import UserRegister from "./pages/UserRegister";
 import Admin from "./pages/Admin";
 import Dashboard from "./pages/Dashboard";
 import Report from "./pages/Report";
@@ -23,9 +26,12 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/user-register" element={<UserRegister />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/emergency" element={<Report />} />
           <Route path="/report" element={<Report />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/my-reports" element={<MyReports />} />
@@ -38,4 +44,4 @@ const App = () => (
   </QueryClientProvider>
 );
 
-export default App; 
+export default App;

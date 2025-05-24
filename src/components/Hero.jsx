@@ -1,6 +1,8 @@
+
 import { motion } from "framer-motion";
 import { MapPin, Heart, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -39,14 +41,18 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                <Phone className="w-5 h-5 mr-2" />
-                Report Emergency
-              </Button>
+              <Link to="/emergency">
+                <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Report Emergency
+                </Button>
+              </Link>
               
-              <Button variant="outline" size="lg" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-                Learn More
-              </Button>
+              <Link to="/about">
+                <Button variant="outline" size="lg" className="border-2 border-blue-200 text-blue-700 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                  Learn More
+                </Button>
+              </Link>
             </div>
             
             <motion.div
@@ -120,4 +126,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

@@ -1,12 +1,12 @@
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Building2, Shield, Bell, MapPin, BarChart3, Heart, Monitor, Users, FileText, TrendingUp } from "lucide-react";
+import { Building2, Shield, Bell, MapPin, BarChart3, Heart, Monitor, Users, FileText, TrendingUp, UserPlus, AlertCircle, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
-import NGOSection from "@/components/NGOSection";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 
@@ -17,7 +17,7 @@ const Index = () => {
       
       {/* Main Action Cards Section */}
       <section className="py-20 px-4 bg-white">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -29,11 +29,11 @@ const Index = () => {
               Get Started Today
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our network as an NGO or access our administrative tools
+              Join our network as an NGO, user, or access our administrative tools
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* NGO Registration Card */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -79,12 +79,57 @@ const Index = () => {
               </Card>
             </motion.div>
 
+            {/* User Registration Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Card className="h-full border-2 border-green-100 hover:border-green-300 transition-all duration-300 hover:shadow-xl">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <UserPlus className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900">User Registration</CardTitle>
+                  <CardDescription className="text-gray-600">
+                    Sign up to receive alerts, report emergencies, and support humanitarian efforts
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <AlertCircle className="w-5 h-5 text-green-500" />
+                      <span className="text-gray-700">Real-time emergency alerts</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <FileText className="w-5 h-5 text-green-500" />
+                      <span className="text-gray-700">Emergency reporting tools</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <DollarSign className="w-5 h-5 text-green-500" />
+                      <span className="text-gray-700">Donation tracking</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Heart className="w-5 h-5 text-green-500" />
+                      <span className="text-gray-700">Community support network</span>
+                    </div>
+                  </div>
+                  <Link to="/user-register" className="block mt-6">
+                    <Button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white py-3 text-lg font-semibold">
+                      Register as User
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            </motion.div>
+
             {/* Admin Portal Card */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
             >
               <Card className="h-full border-2 border-orange-100 hover:border-orange-300 transition-all duration-300 hover:shadow-xl">
                 <CardHeader className="text-center pb-4">
@@ -129,11 +174,10 @@ const Index = () => {
 
       <HowItWorks />
       <Features />
-      <NGOSection />
       <Partners />
       <Footer />
     </div>
   );
 };
 
-export default Index; 
+export default Index;
