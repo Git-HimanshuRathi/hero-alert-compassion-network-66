@@ -100,7 +100,10 @@ const Hero = () => {
                   <img 
                     src="/lovable-uploads/9bb0376c-a74a-4e6c-92b9-ed627d847c4a.png" 
                     alt="Animal Care Emergency Platform"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain filter hue-rotate-180 saturate-150 brightness-110"
+                    style={{
+                      filter: 'hue-rotate(200deg) saturate(1.2) brightness(1.1) contrast(1.1)'
+                    }}
                   />
                 </div>
               </motion.div>
